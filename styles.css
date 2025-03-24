@@ -67,7 +67,7 @@ html, body {
 /* The hover element allows you to give commands for when you hover over an element */
 .mainNav a:hover {
     opacity: 0.6;
-    transition: opacity 0.5s ease-in-out; /* Smooth effect */
+    transition: opacity 0.3s ease-in-out; /* Smooth effect */
 }
 
 .artistsNameHeader {
@@ -147,5 +147,125 @@ html, body {
 
 .socialIcons img:hover {
     opacity: 0.6; /* Makes the icon slightly transparent */
-    transition: opacity 0.5s ease-in-out; /* Smooth effect */
+    transition: opacity 0.3s ease-in-out; /* Smooth effect */
 }
+
+/* HOME PAGE STYLING*/
+
+/*BUTTON CLASS */
+
+.buttonContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    gap: 15px;
+}
+
+.button {
+    text-align: center;
+    vertical-align: middle;
+    padding: 12px 24px;
+    border: 1px solid #222222;
+    border-radius: 999px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.button:hover {
+    color: #f5f5f5;
+    border: 1px solid #5e0606;
+    background-color: #5e0606;
+    transition: all 0.3s ease-in-out;
+    transform: scale(1.05);
+}
+
+.playButton {
+    width: 40px;        
+    height: 40px;
+    border-radius: 50%;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.playButton:hover {
+    transform: scale(1.15);
+}
+
+.toursContainer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    font-size: 14px;
+    margin-bottom: 40px;
+}
+
+.toursContainer h2 {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    font-size: 3em;
+    font-family: 'Branch', sans-serif;
+    color: #5e0606
+}
+
+.toursText {
+    display: grid;
+    grid-template-columns: 
+        minmax(100px, 120px)   /* Date */
+        minmax(120px, 200px)   /* Venue */
+        minmax(250px, 1fr)     /* Location - flexible */
+        minmax(100px, 140px);  /* Button */
+    column-gap: 1em;                              
+    align-items: center;
+    padding: 18px 0;
+    border-bottom: 1px solid #cccccc7e;
+    text-align: center;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* This following targets the last .toursText element inside its parent and removes its border, 
+so the layout stays clean at the bottom. */
+.toursText:last-child {
+    border-bottom: none;
+}
+
+.buyTicketsButton {
+    text-align: center;
+    padding: 8px 16px;
+    border: 1px solid #222222;
+    border-radius: 999px;
+    margin-left: 20px;
+    background-color: #f5f5f5;
+    cursor: pointer;
+}
+
+/* NOTES ON MAKING THE GRID LAYOUT RESPONSIVE */
+
+/* grid-template-columns: 1fr;
+    This changes the grid to have only one column that takes up the full available width (1fr = 1 fraction).
+    This stacks all items vertically (date, venue, location, and button), instead of laying them out side-by-side.
+
+   text-align: center;
+    Ensures all the content inside the grid cells is centered horizontally (especially text like the venue/location). */
+
+@media (max-width: 600px) { /* This means: “Only apply the styles inside this block when the screen width is 600 pixels or less.” 👉 In other words, it’s for mobile devices or very narrow screens. */
+    .toursText {
+      grid-template-columns: 1fr;
+      text-align: center;
+    }
+  
+    .toursText button {
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+}
+  
+
+
