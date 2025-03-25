@@ -24,6 +24,8 @@
 
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
     font-family: 'Montserrat Regular', sans-serif; 
     color: #222222;
 }
@@ -31,10 +33,9 @@
 /* HTML & BODY DEFAULT SETINGS */
 
 html, body {
-    margin: 0;
+    margin: 0 auto;
+    max-width: 12000px;
     height: 100%;
-    display: flex;
-    flex-direction: column;
     background-color: #f5f5f5;
 }
 
@@ -73,7 +74,7 @@ html, body {
 .artistsNameHeader {
     text-align: center;
     margin: 0;
-    padding: 5px;
+    padding: 15px;
     font-size: 5em;
     font-family: 'Branch', sans-serif;
     color: #f5f5f5;
@@ -87,7 +88,7 @@ html, body {
     align-items: center; /* Centers content horizontally */
     text-align: center; /* Aligns text properly */
     max-width: 800px; /* Prevents content from stretching */
-    margin: 0 auto; /* Centers section */
+    margin: 20px auto; /* Centers section */
     padding: 20px;
 }
 
@@ -95,12 +96,13 @@ html, body {
     color: rgb(56, 3, 3);
     font-size: 2em;
     font-weight: bolder;
-    padding-bottom: 10px;
+    padding-bottom: 20px;
 }
 
 .aboutContainer img {
     width: 590px;
     border-radius: 12px;
+    margin: 10px;
 }
 
 .aboutContainer p {
@@ -158,9 +160,9 @@ html, body {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 20px;
-    margin-bottom: 50px;
     gap: 15px;
+    padding-top: 10px;
+    padding-bottom: 50px;
 }
 
 .button {
@@ -174,9 +176,8 @@ html, body {
 }
 
 .button:hover {
-    color: #f5f5f5;
-    border: 1px solid #5e0606;
     background-color: #5e0606;
+    color: #f5f5f5;
     transition: all 0.3s ease-in-out;
     transform: scale(1.05);
 }
@@ -236,14 +237,10 @@ so the layout stays clean at the bottom. */
     border-bottom: none;
 }
 
-.buyTicketsButton {
-    text-align: center;
-    padding: 8px 16px;
-    border: 1px solid #222222;
-    border-radius: 999px;
-    margin-left: 20px;
-    background-color: #f5f5f5;
-    cursor: pointer;
+.buyTicketsButton:hover {
+    background-color: #222;
+    color: #f5f5f5;
+    transform: scale(1.05);
 }
 
 /* NOTES ON MAKING THE GRID LAYOUT RESPONSIVE */
@@ -266,6 +263,211 @@ so the layout stays clean at the bottom. */
       margin-bottom: 10px;
     }
 }
+
+/* STORE SYLING */
+
+.productSection {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 20px;
+    font-size: 14px;
+}
+
+.productGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    width: 100%; 
+}
+
+.productSection h2 {
+    text-align: left;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    font-size: 2em;
+    font-family: 'Branch', sans-serif;
+    color: #5e0606;
+}
+
+.productCard {
+    text-align: center;
+    padding: 20px;
+    margin: 0;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+}
+
+.productCard img {
+    width: 100%;
+    max-width: 200px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+
+.productCard h3 {
+    font-size: 1.1em;
+    margin: 10px 0;
+}
   
+.priceAndButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.priceAndButton p {
+    margin: 0;
+    font-weight: bold;
+}
+
+.productCard button {
+    padding: 6px 12px;
+    font-size: 14px;
+    border: 1px solid #222;
+    background-color: transparent;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.productCard button:hover {
+    background-color: #222;
+    color: #f5f5f5;
+    transform: scale(1.05);
+}
+
+/* CART */
+
+.cartSection {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 20px;
+    padding-bottom: 10px;
+    font-size: 16px;
+    border-bottom: 1px solid rgb(73, 73, 73);
+}
+
+.cartSection h2 {
+    text-align: left;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    font-size: 2em;
+    font-family: 'Branch', sans-serif;
+    color: #5e0606;
+}
+
+.cartHeader {
+    border-bottom: 1px solid #222;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+.cartHeader,
+.cartProduct {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cartHeader span,
+.cartProduct .col-item,
+.cartProduct .col-price,
+.cartProduct .col-qty {
+  flex-basis: 33.33%; /* 3 equal columns */
+  text-align: center;
+}
+
+.cartProduct .col-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  text-align: left;
+}
+
+.cartProduct img {
+    width: 100%;
+    max-width: 100px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.cartProduct {
+    padding: 10px;
+}
+
+.col-qty input {
+    width: 50px;
+    padding: 2px 4px;
+    border: 1px solid #222222b0;
+    border-radius: 6px;
+    text-align: center;
+    margin-right: 10px;
+    background-color: transparent;
+}
+
+.removeButton {
+    padding: 6px 12px;
+    font-size: 14px;
+    border: 1px solid #222;
+    background-color: transparent;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.removeButton:hover {
+    background-color: #5e0606;
+    color: #f5f5f5;
+    transform: scale(1.05);
+}
+
+.cartGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr; /* matches ITEM, PRICE, QUANTITY, ACTION */
+    row-gap: 20px;
+    width: 100%;
+  }
+
+.purchaseButton {
+    justify-self: end;
+    padding: 6px 12px;
+    border-radius: 999px;
+    border: 1px solid #222;
+    background: transparent;
+    cursor: pointer;
+}
+
+.cartProductTotal {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;       /* align both items to the right */
+    gap: 10px;                       /* adds space between total and button */
+    margin-bottom: 20px;
+}
+
+.primaryButton {
+    padding: 6px 12px;
+    border: 1px solid #222;
+    background-color: transparent;
+    border-radius: 999px;
+    margin-left: 10px;
+    margin-right: 70px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.primaryButton:hover {
+    background-color: #222;
+    color: #f5f5f5;
+    transform: scale(1.05);
+}
 
 
+  
+  

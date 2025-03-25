@@ -17,130 +17,140 @@
             <h1 class = "artistsNameHeader">Alessia Cara</h1>
         </header>
         <!--Music Section-->
-        <section>
+        <section class = "productSection">
             <h2>MUSIC</h2>
-            <div>
-                <div>
-                    <strong>Know It All Record</strong>
+            <div class = "productGrid">
+                <div class = "productCard">
+                    <img src = "Imgs/knowItAll.png">
+                    <h3>Know It All Record</h3>
+                    <div class="priceAndButton">
+                        <p>$14.95</p>
+                        <button>ADD TO CART</button>
+                    </div>
                 </div>
-                <img src = "Imgs/knowItAll.png">
-                <div>
-                    <span>$14.95</span>
-                    <button role = "button">ADD TO CART</button>
+                <div class = "productCard">
+                    <img src = "Imgs/growingPains.png">
+                    <h3>Growing Pains Record</h3>
+                    <div class="priceAndButton">
+                        <p>$14.95</p>
+                        <button>ADD TO CART</button>
+                    </div>
                 </div>
-            </div>
-            <div>
-                <div>
-                    <strong>Growing Pains Record</strong>
+                <div class = "productCard">
+                    <img src = "Imgs/inTheMeantime.png">
+                    <h3>In the Meantime Record</h3>
+                    <div class="priceAndButton">
+                        <p>$14.95</p>
+                        <button>ADD TO CART</button>
+                    </div>
                 </div>
-                <img src = "Imgs/growingPains.png">
-                <div>
-                    <span>$14.95</span>
-                    <button role = "button">ADD TO CART</button>
-                </div>
-            </div>
-            <div>
-                <div>
-                    <strong>In the Meantime Record</strong>
-                </div>
-                <img src = "Imgs/inTheMeantime.png">
-                <div>
-                    <span>$14.95</span>
-                    <button role = "button">ADD TO CART</button>
-                </div>
-            </div>
-            <div>
-                <div>
-                    <strong>Love & Hyperbole Record</strong>
-                </div>
-                <img src = "Imgs/loveAndHyperpole.png">
-                <div>
-                    <span>$14.95</span>
-                    <button role = "button">ADD TO CART</button>
+                <div class = "productCard">
+                    <img src = "Imgs/loveAndHyperpole.png">
+                    <h3>Love & Hyperbole Record</h3>
+                    <div class="priceAndButton">
+                        <p>$14.95</p>
+                        <button>ADD TO CART</button>
+                    </div>
                 </div>
             </div>
         </section>
         <!--Merch Section-->
-        <section>
+        <section class="productSection">
             <h2>MERCH</h2>
-            <div>
-                <div>
-                    <strong>Love & Hyperbole Crewneck Sweatshirt on Navy</strong>
+            <div class="productGrid">
+              <div class="productCard">
+                <img src="Imgs/lhMerch.png" alt="Love & Hyperbole Crewneck">
+                <h3>Love & Hyperbole Crewneck Sweatshirt on Navy</h3>
+                <div class="priceAndButton">
+                  <p>$55.00</p>
+                  <button>ADD TO CART</button>
                 </div>
-                <img src = "Imgs/lhMerch.png" width = "250" height = "280">
-                <div>
-                    <span>$55.00</span>
-                    <button role = "button">ADD TO CART</button>
+              </div>    
+              <div class="productCard">
+                <img src="Imgs/im2Merch.png" alt="Are You A Fool Slate Blue Crewneck">
+                <h3>'Are You A Fool' Slate Blue Crewneck</h3>
+                <div class="priceAndButton">
+                  <p>$50.00</p>
+                  <button>ADD TO CART</button>
                 </div>
+              </div>        
+              <div class="productCard">
+                <img src="Imgs/deadManMerch.png" alt="Dead Man T-Shirt">
+                <h3>'Dead Man T-Shirt White'</h3>
+                <div class="priceAndButton">
+                  <p>$35.00</p>
+                  <button>ADD TO CART</button>
+                </div>
+              </div>
+              <div class="productCard">
+                <img src="Imgs/imMerch.png" alt="I Miss You Don't Call Me Hoodie">
+                <h3>'I Miss You, Don't Call Me' Hoodie</h3>
+                <div class="priceAndButton">
+                  <p>$75.00</p>
+                  <button>ADD TO CART</button>
+                </div>
+              </div>
             </div>
-            <div>
-                <div>
-                    <strong>'Are You A Fool' Slate Blue Crewneck</strong>
-                </div>
-                <img src = "Imgs/im2Merch.png" width = "300" height = "300">
-                <div>
-                    <span>$50.00</span>
-                    <button role = "button">ADD TO CART</button>
-                </div>
-            </div>
-            <div>
-                <div>
-                    <strong>'I Miss You, Don't Call Me' Hoodie</strong>
-                </div>
-                <img src = "Imgs/imMerch.png" width = "350" height = "350">
-                <div>
-                    <span>$75.00</span>
-                    <button role = "button">ADD TO CART</button>
-                </div>
-            </div>
-            <div>
-                <div>
-                    <strong>Dead Man T-Shirt White</strong>
-                </div>
-                <img src = "Imgs/deadManMerch.png" width = "300" height = "300">
-                <div>
-                    <span>$35.00</span>
-                    <button role = "button">ADD TO CART</button>
-                </div>
-            </div>
-        </section>
+          </section>
+          
         <!--Cart Section-->
-        <section>
+        <section class = "cartSection">
             <h2>CART</h2>
-            <div>
-                <strong>ITEM</strong>
-                &lt;&gt;
-                <strong>PRICE</strong>
-                &lt;&gt;
-                <strong>QUANTITY</strong>
+            <div class="cartHeader">
+                <span class="col-item"><h3>ITEM</h3></span>
+                <span class="col-price"><h3>PRICE</h3></span>
+                <span class="col-qty"><h3>QUANTITY</h3></span>
             </div>
-            <div>
-                <img src = "Imgs/loveAndHyperpole.png" width = "150" height = "150">
-                <span>Love & Hyperbole Record</span>
-                &lt;&gt;
-                <span>$14.95</span>
-                &lt;&gt;
-                <input type = "number" value = "1">
-                <button role = "button">REMOVE</button>
+            <div class="cartProduct">
+                <div class="col-item">
+                  <img src = "Imgs/loveAndHyperpole.png" alt="Love & Hyperbole" />
+                  <div>
+                    <span>Love & Hyperbole Record</span>
+                  </div>
+                </div>
+              
+                <div class="col-price">
+                  <!-- Optional if price isn't under image -->
+                  $14.95
+                </div>
+              
+                <div class="col-qty">
+                  <input type = "number" value = "1" />
+                  <button class = "removeButton">REMOVE</button>
+                </div>  
             </div>
-            <div>
-                <img src = "Imgs/inTheMeantime.png" width = "150" height = "150">
-                <span>In the Meantime Record</span>
-                &lt;&gt;
-                <span>$14.95</span>
-                &lt;&gt;
-                <input type = "number" value = "1">
-                <button role = "button">REMOVE</button>
-            </div>
-            <hr>
-            <div>
-                <strong>Total</strong>
-                <span>$28.10</span>
-            </div>
-            <div>
-                <button role = "button">PURCHASE</button>
+
+            <div class="cartProduct">
+                <div class="col-item">
+                  <img src = "Imgs/inTheMeantime.png" alt="In The Meantime" />
+                  <div>
+                    <span>In the Meantime Record</span>
+                  </div>
+                </div>
+              
+                <div class="col-price">
+                  <!-- Optional if price isn't under image -->
+                  $14.95
+                </div>
+              
+                <div class="col-qty">
+                  <input type = "number" value = "1" />
+                  <button class = "removeButton">REMOVE</button>
+                </div>  
             </div>
         </section>
+
+        <section>
+            <div class="cartProductTotal">
+                <div></div>
+                <div></div>
+                <div class="cart-total">
+                  <span>Total: $28.10</span>
+                  <button class = "primaryButton">PURCHASE</button>
+                </div>  
+            </div>
+        </section>
+
         <!--FOOTER SECTION-->  
         <footer class = "mainFooter">
             <h3 class = "artistsNameFooter">Alessia Cara</h3>
