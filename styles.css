@@ -446,8 +446,8 @@ so the layout stays clean at the bottom. */
     font-size: 16px;
     display: flex;
     align-items: center;
-    justify-content: center;       /* align both items to the right */
-    gap: 10px;                       /* adds space between total and button */
+    justify-content: center;       
+    gap: 10px;                       
     margin-bottom: 20px;
 }
 
@@ -467,6 +467,7 @@ so the layout stays clean at the bottom. */
     color: #f5f5f5;
     transform: scale(1.05);
 }
+
 
 
   
